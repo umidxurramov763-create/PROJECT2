@@ -259,49 +259,35 @@
      </div>
      </div>
 
-     <script>
+<script>
 document.addEventListener("DOMContentLoaded", () => {
 
-  /* ===============================
-     0. BODY ORQA FON (OCHIQ KO‘K ↔ OCHIQ QIZIL)
-     =============================== */
-  const bgColors = [
-    "linear-gradient(120deg, #7ecbff, #ffffff)", // ochiq ko‘k
-    "linear-gradient(120deg, #ff9a9a, #ffffff)"  // ochiq qizil
-  ];
-  let bgIndex = 0;
-  setInterval(() => {
-    document.body.style.background = bgColors[bgIndex];
-    document.body.style.transition = "background 3s ease-in-out";
-    bgIndex = (bgIndex + 1) % bgColors.length;
-  }, 4000);
-
-
-  /* ===============================
-     1. MAHSULOTLAR QIMIRLASHI
-     (orqa fon o'zgarmaydi)
-     =============================== */
+  /* Card tebranish animatsiyasi */
   const cards = document.querySelectorAll(".logo-33, .logo-333, .logo-3");
   let y = 0, dir = 1;
+
   setInterval(() => {
     y += dir * 0.4;
     if (y > 10 || y < 0) dir *= -1;
-    cards.forEach(card => card.style.transform = `translateY(-${y}px)`);
+    cards.forEach(card => {
+      card.style.transform = `translateY(-${y}px)`;
+    });
   }, 30);
 
-
-  /* ===============================
-     2. H3 NARX YOZUVI
-     (QORA + QIZIL, HOVER TEZLIK)
-     =============================== */
+  /* Card ichidagi h3 typing animatsiya */
   cards.forEach(card => {
     const h3 = card.querySelector("h3");
     if (!h3) return;
+
     const text = h3.textContent;
     h3.textContent = "";
+
     const textColors = ["#000", "#E80001"];
-    let colorIndex = 0, charIndex = 0;
-    let speedFast = 45, speedSlow = 120, speed = speedFast;
+    let colorIndex = 0;
+    let charIndex = 0;
+    let speedFast = 45;
+    let speedSlow = 120;
+    let speed = speedFast;
 
     function typeText() {
       if (charIndex < text.length) {
@@ -318,16 +304,14 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 1200);
       }
     }
+
     card.addEventListener("mouseenter", () => speed = speedSlow);
     card.addEventListener("mouseleave", () => speed = speedFast);
+
     typeText();
   });
 
-
-  /* ===============================
-     3. BOSHQA YOZUVLAR DIV ICHIDA
-     (ketma-ketin, qora-qizil)
-     =============================== */
+  /* Auto text yozilishi */
   const textsQueue = [
     { text: "Yangi kelgan mahsulot", color: "#000" },
     { text: "Sifat kafolatlangan", color: "#E80001" },
@@ -337,7 +321,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const textDivs = document.querySelectorAll(".auto-text");
 
   textDivs.forEach(div => {
-    let textIndex = 0, charIndex = 0;
+    let textIndex = 0;
+    let charIndex = 0;
 
     function writeQueue() {
       if (charIndex < textsQueue[textIndex].text.length) {
@@ -354,11 +339,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 1200);
       }
     }
+
     writeQueue();
   });
 
 });
 </script>
+
 
 
 

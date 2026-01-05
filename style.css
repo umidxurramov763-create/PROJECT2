@@ -147,7 +147,6 @@ nav img{
     background-color: #E80001;
     color: #ffffff;
     transform: translateY(-20%);
-    transform: rotate(30deg);
 }
 
 
@@ -206,18 +205,7 @@ nav img{
     width: 80%;
     margin-left: 10%;
 }
-.logo-33 button:hover{
-    transform: rotate(360deg);
-    transition: 1.5s;
-}
-.logo-333 button:hover{
-    transform: rotate(360deg);
-    transition: 1.5s;
-}
-.logo-3 button:hover{
-    transform: rotate(360deg);
-    transition: all 1.5s ease-in-out;
-}
+
 .logo-33 h3{
     margin-left: 10%;
 }
@@ -293,13 +281,11 @@ h1{
 }
 body .logo-4 .fa-solid:hover{
     color: #a7a7a7;
-    transform: rotate(100deg);
     transform: translateX(30%);
     transition: 0.4s;
 }
 body .container-4 .fa-solid:hover{
     color: #0077ff;
-    transform: rotate(360deg);
     transform: translateX(30%);
     transition: 0.4s;
 }
@@ -450,4 +436,10 @@ button a:hover{
     color: #ffffff;
     transition: 0.4s;
 }
-
+.container-8 header{
+    margin-top: -6.5%;
+}
+.container-9{
+    display: flex;
+    align-items: center;
+}

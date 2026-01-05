@@ -96,5 +96,30 @@
      </div>
      </div>
 
+     <script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const images = document.querySelectorAll(
+    ".big-img, .content img"
+  );
+
+  let pos = 0;
+  let direction = 1;
+
+  setInterval(() => {
+    pos += direction * 0.3;
+
+    if (pos > 8 || pos < 0) direction *= -1;
+
+    images.forEach(img => {
+      img.style.transform = `translateY(-${pos}px)`;
+      img.style.transition = "transform 0.1s linear";
+    });
+  }, 30);
+
+});
+</script>
+
+
 </body>
 </html>
