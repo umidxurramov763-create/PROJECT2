@@ -4,6 +4,79 @@
     text-decoration: none;
     list-style: none;
 }
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #fff;
+    position: relative;
+}
+header .logo-777{
+    z-index: -1;
+}
+
+header .nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+header .nav-links a {
+    text-decoration: none;
+    color: #000;
+}
+
+header p {
+    margin: 0;
+}
+
+/* HAMBURGER */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    border-radius: 2px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+    }
+
+    /* Hide nav by default */
+    header .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        padding: 10px 0;
+        gap: 15px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    /* Show hamburger */
+    .hamburger {
+        display: flex;
+    }
+
+    /* When active */
+    header .nav-links.active {
+        display: flex;
+    }
+}
+
 .auto-text {
   margin-left: 10%;
   margin-top: 8px;
@@ -59,10 +132,11 @@ button{
     border-color: rgb(255, 0, 0);
     width: 150px;
 }
+
 button:hover{
     background-color: red;
-    transition: 0.3s;
     color: #ffffff;
+    transition: 0.3s; 
 }
 .restart sup{
     display: flex;
@@ -131,10 +205,6 @@ nav img{
 .logo-2 a{
     color: #E80001;
 }
-.logo-2 a:hover{
-    color: #ffffff;
-    transition: 0.4s;
-}
 .logo-2{
    display: flex;
    gap: 45px;
@@ -143,7 +213,7 @@ nav img{
    background-color: #ffffff;
 }
 .logo-2 button:hover{
-    transition: all 0.4s ease-in-out;
+    transition: 0.4s;
     background-color: #E80001;
     color: #ffffff;
     transform: translateY(-20%);
@@ -425,6 +495,18 @@ header ul .li-2 a{
     display: flex;
     padding: 10px;
 }
+.container .box button{
+    width: 30%;
+    margin-left: 35%;
+}
+.restart{
+    display: flex;
+    align-items: center;
+}
+
+.restart button{
+    width: 150%;
+}
 .logo-9 p{
     color: #5a5757;
 }
@@ -439,17 +521,10 @@ button a:hover{
 .container-8 header{
     margin-top: -6.5%;
 }
-.container-9{
-    display: flex;
-    align-items: center;
-}
 
-/* =========================
-   RESPONSIVE – PHONE
-   ========================= */
+
 @media (max-width: 768px) {
 
-  /* HEADER / NAV */
   header {
     flex-direction: column;
     padding: 15px;
@@ -461,6 +536,9 @@ button a:hover{
     padding: 0;
     text-align: center;
   }
+  header .logo-777{
+    z-index: 1;
+  }
 
   nav {
     flex-direction: column;
@@ -470,6 +548,17 @@ button a:hover{
 
   nav img {
     width: 60px;
+  }
+  .box-8 button{
+    width: 200%;
+    align-items: center;
+  }
+  .logo-9{
+    display: flex;
+  }
+  .container-8 header{
+    display: flex;
+    align-items: center;
   }
 
   .restart {
@@ -485,12 +574,14 @@ button a:hover{
   }
 
   button {
-    width: 90%;
+    display: flex;
+    align-items: center;
+    width: 20%;
     margin: 10px auto;
     display: block;
   }
 
-  /* HERO / CONTAINER */
+
   .container {
     flex-direction: column;
     width: 90%;
@@ -504,7 +595,7 @@ button a:hover{
     width: 100%;
   }
 
-  /* MINUS MARGINLARNI O‘CHIRAMIZ */
+
   .box button,
   .box-2 p,
   .box-3 h2 {
@@ -523,22 +614,22 @@ button a:hover{
     gap: 15px;
   }
 
-  /* PRODUCTS */
+
   .container-3 {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; 
+ }
 
   .logo-33,
   .logo-333,
   .logo-3 {
-    width: 90%;
-    height: auto;
+    width: calc(50% - 10px); 
     margin: 0;
+    height: auto;
   }
 
-  /* INFO BOXES */
   .container-4 {
     flex-direction: column;
     gap: 20px;
@@ -555,12 +646,21 @@ button a:hover{
   .box-4 img {
     width: 50%;
   }
+  .logo-33 img{
+    width: 80%;
+  }
+  .logo-333 img{
+    width: 80%;
+    height: 250px;
+  }
+  .logo-3 img{
+    height: 250px;
+  }
 
   .box-44 a {
     margin: 0;
   }
 
-  /* BIG PROMO */
   .logo-7 {
     width: 90%;
     height: auto;
@@ -582,7 +682,6 @@ button a:hover{
     display: block;
   }
 
-  /* BUTTON GROUP */
   .box-7 {
     flex-direction: column;
     align-items: center;
@@ -594,7 +693,6 @@ button a:hover{
     margin: 10px 0;
   }
 
-  /* FOOTER */
   .nav-link .ul-4 {
     flex-direction: column;
     gap: 15px;
@@ -624,7 +722,6 @@ button a:hover{
   }
 }
 
-/* KICHIK TELEFONLAR */
 @media (max-width: 480px) {
 
   nav .p11 {
@@ -651,4 +748,3 @@ button a:hover{
     font-size: 14px;
   }
 }
-

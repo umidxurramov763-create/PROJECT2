@@ -9,12 +9,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <header>
+   <header>
+    <div class="logo-777">inmart</div>
+    
+   
+    <nav class="nav-links">
         <a href="index-1111.html">Do’konlarimiz</a>
         <a href="index-111.html">Biz haqimizda</a>
         <a href="index-11111.html">Bog’lanish</a>
-        <p>Call center : <i class="fa-solid fa-phone"></i><a href="">+998 94 656-22-22</a></p>
-    </header>
+    </nav>
+     <p>Call center : <i class="fa-solid fa-phone"></i><a href="">+998 94 656-22-22</a></p>
+
+   
+    <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</header>
+
     <br><br>
     <hr>
     <nav>
@@ -224,6 +237,7 @@
         </ul>
        
         </nav>
+        <div class="ul">
         <header>
         <ul>
             <li class="li-1"><a href=""><b>Inmart</b></a></li>
@@ -246,6 +260,7 @@
             <p>Ushbu qo’ng’iroq markazi orqali siz o’zingizning qiziqtirgan savollarga javob topishingiz mumkin.</p>
         </ul>
         </header>
+        </div>
     </div>
     <hr>
     <div class="container-9">
@@ -259,10 +274,17 @@
      </div>
      </div>
 
+
 <script>
+
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
 document.addEventListener("DOMContentLoaded", () => {
 
-  /* Card tebranish animatsiyasi */
   const cards = document.querySelectorAll(".logo-33, .logo-333, .logo-3");
   let y = 0, dir = 1;
 
@@ -274,7 +296,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }, 30);
 
-  /* Card ichidagi h3 typing animatsiya */
   cards.forEach(card => {
     const h3 = card.querySelector("h3");
     if (!h3) return;
@@ -311,7 +332,7 @@ document.addEventListener("DOMContentLoaded", () => {
     typeText();
   });
 
-  /* Auto text yozilishi */
+ 
   const textsQueue = [
     { text: "Yangi kelgan mahsulot", color: "#000" },
     { text: "Sifat kafolatlangan", color: "#E80001" },
