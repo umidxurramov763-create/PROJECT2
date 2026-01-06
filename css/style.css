@@ -149,3 +149,117 @@ button {
 .container-8 header{
     margin-top: -5%;
 }
+
+
+/* =========================
+   RESPONSIVE (PHONE)
+   ========================= */
+@media (max-width: 768px) {
+
+  body {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .overlay {
+    padding: 20px;
+  }
+
+  .card {
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  /* LEFT */
+  .left {
+    width: 100%;
+  }
+
+  .main-img {
+    padding: 15px;
+  }
+
+  .thumbs {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .thumbs img {
+    width: 55px;
+  }
+
+  /* RIGHT */
+  .right {
+    width: 100%;
+    text-align: center;
+  }
+
+  .top-info {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .top-info h2 {
+    font-size: 22px;
+  }
+
+  .icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .desc {
+    font-size: 14px;
+  }
+
+  .price {
+    text-align: center;
+  }
+
+  .price .new {
+    font-size: 20px;
+  }
+
+  .price .old {
+    display: block;
+    margin: 5px 0 0;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .buttons button {
+    width: 100%;
+  }
+}
+
+/* KICHIK TELEFONLAR */
+@media (max-width: 480px) {
+
+  .card {
+    padding: 15px;
+  }
+
+  .top-info h2 {
+    font-size: 20px;
+  }
+
+  .thumbs img {
+    width: 50px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .desc {
+    font-size: 13px;
+  }
+}

@@ -257,3 +257,131 @@ button a:hover{
     align-items: center;
 }
 
+/* =========================
+   RESPONSIVE (PHONE)
+   ========================= */
+@media (max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    padding: 15px;
+    gap: 10px;
+  }
+
+  header p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  nav {
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+  }
+
+  nav img {
+    width: 60px;
+  }
+
+  .restart {
+    margin: 15px 0 0;
+    padding: 0;
+    justify-content: center;
+  }
+
+  input {
+    width: 90%;
+    margin: 15px auto;
+    display: block;
+  }
+
+  button {
+    width: 90%;
+    margin: 10px auto;
+    display: block;
+  }
+
+  .contact {
+    padding: 15px;
+  }
+
+  .contact-box {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .socials {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* MUHIM: minus marginlarni o‘chiramiz */
+  .btn-6,
+  .btn-7 {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .nav-link .ul-4 {
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 0;
+    align-items: center;
+  }
+
+  .container-8 {
+    margin-top: 0;
+  }
+
+  .container-8 header {
+    width: 100%;
+    margin: 0;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .container-8 .ul-3 {
+    width: 100%;
+  }
+
+  .container-9 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo-9 {
+    margin: 0;
+    justify-content: center;
+  }
+}
+
+/* KICHIK TELEFONLAR */
+@media (max-width: 480px) {
+
+  nav .p11 {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  nav .p12 {
+    margin: 0;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .socials button {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .phone {
+    font-size: 16px;
+  }
+}

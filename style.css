@@ -443,3 +443,212 @@ button a:hover{
     display: flex;
     align-items: center;
 }
+
+/* =========================
+   RESPONSIVE – PHONE
+   ========================= */
+@media (max-width: 768px) {
+
+  /* HEADER / NAV */
+  header {
+    flex-direction: column;
+    padding: 15px;
+    gap: 10px;
+  }
+
+  header p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  nav {
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+  }
+
+  nav img {
+    width: 60px;
+  }
+
+  .restart {
+    margin: 15px 0 0;
+    padding: 0;
+    justify-content: center;
+  }
+
+  input {
+    width: 90%;
+    margin: 15px auto;
+    display: block;
+  }
+
+  button {
+    width: 90%;
+    margin: 10px auto;
+    display: block;
+  }
+
+  /* HERO / CONTAINER */
+  .container {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    margin: 20px auto;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .container img {
+    width: 100%;
+  }
+
+  /* MINUS MARGINLARNI O‘CHIRAMIZ */
+  .box button,
+  .box-2 p,
+  .box-3 h2 {
+    margin: 10px 0;
+    width: 100%;
+  }
+
+  /* LOGO BUTTONS */
+  .container-2 {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .logo-2 {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* PRODUCTS */
+  .container-3 {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .logo-33,
+  .logo-333,
+  .logo-3 {
+    width: 90%;
+    height: auto;
+    margin: 0;
+  }
+
+  /* INFO BOXES */
+  .container-4 {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .box-4 {
+    width: 90%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .box-4 img {
+    width: 50%;
+  }
+
+  .box-44 a {
+    margin: 0;
+  }
+
+  /* BIG PROMO */
+  .logo-7 {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .box-8 h1,
+  .box-8 p {
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .box-8 img {
+    position: static;
+    width: 80%;
+    margin: 20px auto 0;
+    display: block;
+  }
+
+  /* BUTTON GROUP */
+  .box-7 {
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+  }
+
+  .box-7 .btn,
+  .box-7 .btn-2 {
+    margin: 10px 0;
+  }
+
+  /* FOOTER */
+  .nav-link .ul-4 {
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 0;
+    align-items: center;
+  }
+
+  .container-8 header {
+    width: 100%;
+    margin: 0;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .container-8 .ul-3 {
+    width: 100%;
+  }
+
+  .container-9 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo-9 {
+    margin: 0;
+    justify-content: center;
+  }
+}
+
+/* KICHIK TELEFONLAR */
+@media (max-width: 480px) {
+
+  nav .p11 {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  nav .p12 {
+    margin: 0;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}
+

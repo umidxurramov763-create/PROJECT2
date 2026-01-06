@@ -246,3 +246,139 @@ img{
     display: flex;
     align-items: center;
 }
+
+/* =========================
+   RESPONSIVE (PHONE)
+   ========================= */
+@media (max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    padding: 15px;
+    gap: 10px;
+  }
+
+  header p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  nav {
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+  }
+
+  nav img {
+    width: 60px;
+  }
+
+  .restart {
+    margin: 15px 0 0;
+    padding: 0;
+    justify-content: center;
+  }
+
+  input {
+    width: 90%;
+    margin: 15px auto;
+    display: block;
+  }
+
+  button {
+    width: 90%;
+    margin: 10px auto;
+    display: block;
+  }
+
+  .shops {
+    padding: 15px;
+  }
+
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .content {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .branches {
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+  }
+
+  .branches li {
+    white-space: nowrap;
+  }
+
+  .nav-link .ul-4 {
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 0;
+    align-items: center;
+  }
+
+  .container-8 {
+    margin-top: 0;
+  }
+
+  .container-8 header {
+    width: 100%;
+    margin: 0;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .container-8 .ul-3 {
+    width: 100%;
+  }
+
+  .container-9 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo-9 {
+    margin: 0;
+    justify-content: center;
+  }
+
+  img {
+    height: auto;
+  }
+}
+
+/* KICHIK TELEFONLAR */
+@media (max-width: 480px) {
+
+  nav .p11 {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  nav .p12 {
+    margin: 0;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .filters button {
+    font-size: 13px;
+    padding: 6px 8px;
+  }
+
+  .branches li {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}
